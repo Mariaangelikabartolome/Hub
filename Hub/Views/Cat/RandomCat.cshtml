@@ -1,0 +1,18 @@
+﻿@model string
+
+<div class="container">
+    <h1 class="mt-4">Random Cat</h1>
+
+    @if (!string.IsNullOrEmpty(Model))
+    {
+        <img src="@Model" alt="Random Cat" class="img-fluid" />
+    }
+    else
+    {
+        <p>No cat image available.</p>
+    }
+
+    <div class="mt-4">
+        <a href="@Url.Action("RandomCat", "Cat")" class="btn btn-primary">Get Another Cat</a>
+    </div>
+</div>
